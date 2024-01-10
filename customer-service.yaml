@@ -14,3 +14,9 @@ spring:
         format_sql: true
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+
+server:
+  port: 8082
+
+base:
+  packages: com.microservice.framework
