@@ -14,6 +14,12 @@ spring:
         format_sql: true
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+  cloud:
+    consul:
+      discovery:
+        heartbeat:
+          enabled: true
+          ttl: 10s
 
 server:
   port: 8082

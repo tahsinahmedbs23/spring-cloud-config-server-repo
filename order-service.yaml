@@ -18,6 +18,12 @@ spring:
       host: localhost
       port: 16379
       password: mypass
+  cloud:
+    consul:
+      discovery:
+        heartbeat:
+          enabled: true
+          ttl: 10s
 
 server:
   port: 8083
