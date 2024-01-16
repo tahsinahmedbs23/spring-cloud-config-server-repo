@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+base:
+  packages: com.microservice.framework
+
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+  cloud:
+    consul:
+      discovery:
+        heartbeat:
+          enabled: true
+          ttl: 10s
